@@ -1,0 +1,98 @@
+body {
+    background-color: #000000;
+    color: #00FF00;
+    font-family: monospace;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 65%;
+}
+
+.sidebar {
+    background-color: #000000;
+    float: right;
+    height: 100%;
+    margin: 0;
+    padding-left: 1em;
+    width: 10%;
+    transition: width 0.5s ease;
+}
+
+.sidebar.collapsed {
+    transition: width 0.5s ease;
+    width: 1em;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: right;
+}
+
+.sidebar ul.collapsed {
+    display: none;
+}
+
+.post {
+    width: 75%;
+    border-bottom: 1px solid #00FF00;
+    margin: 8px;
+    padding: 0;
+    display: block;
+}
+.content {
+    color: #108a10;
+    transition: height 0.5s ease;
+    height: auto;
+    overflow: hidden;
+}
+.content.collapsed{
+    height: 0;
+    overflow: hidden;
+}
+
+.post .title, .post .reply {
+    font-weight: bold;
+    color: #00FF00;
+}
+
+
+.post .title .author, .post .reply .author {
+    float: right;
+    text-transform: uppercase;
+}
+
+.intro {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.read-more {
+    background-color: #000000;
+    border: 1px solid #00FF00;
+    color: #108a10; 
+    font-family: monospace;
+    font-size: 12px;
+    margin: 3px;
+    padding: 0;
+}
+
+.reply {
+    margin-left: 1em;
+}
+.replyBody{
+    color: #108a10;
+}
+.wordFromGod {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
