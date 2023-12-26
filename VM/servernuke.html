@@ -8,8 +8,8 @@
     <h1>Server Nuke</h1>
     <form id="serverNukeForm" action="https://www.billdlabs.com/api/servernuke" method="post">
         <div class="form-row">
-            <label for="name">Your (discord) name:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="user">Your (discord) name:</label>
+            <input type="text" id="user" name="user" required>
         </div>
         <div class="form-row">
             <label for="url">URL:</label>
@@ -29,7 +29,7 @@
             event.preventDefault(); // Prevent form submission
 
             var form = event.target;
-            var name = form.elements.name.value;
+            var name = form.elements.user.value;
             var url = form.elements.url.value;
             var password = form.elements.password.value;
 
