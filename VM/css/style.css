@@ -97,7 +97,8 @@ body {
     text-transform: uppercase;
 }
 
-form{
+form, #response{
+    margin-bottom: 5em;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
