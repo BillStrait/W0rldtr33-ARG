@@ -2,15 +2,47 @@
 <html>
 <head>
     <title>Server Nuke 3000</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>Server Nuke</h1>
-    <form action="https://www.billdlabs.com/api/servernuke" method="post">
-        <label for="url">URL:</label>
-        <input type="text" id="url" name="url" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Submit">
+    <form id="serverNukeForm" action="https://www.billdlabs.com/api/servernuke" method="post">
+        <div class="form-row">
+            <label for="name">Your (discord) name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" required>
+        </div>
+        <div class="form-row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <input class="server-nuke-submit" type="submit" value="Submit">
     </form>
+
+    <div id="response"></div>
+
+    <script>
+        document.getElementById("serverNukeForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var form = event.target;
+            var name = form.elements.name.value;
+            var url = form.elements.url.value;
+            var password = form.elements.password.value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", form.action, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("response").textContent = xhr.responseText;
+                }
+            };
+            xhr.send("user=" + encodeURIComponent(name) + "&url=" + encodeURIComponent(url) + "&password=" + encodeURIComponent(password));
+        });
+    </script>
 </body>
 </html>

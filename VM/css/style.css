@@ -74,7 +74,7 @@ body {
     margin-bottom: 3em;
 }
 
-.read-more {
+.read-more, .server-nuke-submit {
     background-color: #000000;
     border: 1px solid #00FF00;
     color: #108a10; 
@@ -95,4 +95,34 @@ body {
     color: #000000;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+form{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    flex: 1;
+    text-align: left;
+    margin-right: 10px;
+    width: 15em;
+}
+
+.form-row input {
+    flex: 6;
+    align-items: left;
+}
+
+h1{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
 }
